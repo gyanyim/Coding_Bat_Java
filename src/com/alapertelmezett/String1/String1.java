@@ -87,4 +87,21 @@ public class String1 {
         }
     }
 
+    //seeColor
+    /*Given a string, if the string begins with "red" or "blue" return that color string,
+    otherwise return the empty string.*/
+    public String seeColor(String str) {
+        if (str.length() < 3) {
+            return "";
+        } else if (str.length() == 3 && str.equals("red") ) {
+            return "red";
+        } else if (str.length() > 3 && str.startsWith("red")) {
+            return "red";
+        } else if (str.length() > 3 && str.startsWith("blue")) {
+            return "blue";
+        } else {
+            return "";
+        }
+    }
+
 }
