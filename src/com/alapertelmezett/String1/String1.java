@@ -93,7 +93,7 @@ public class String1 {
     public String seeColor(String str) {
         if (str.length() < 3) {
             return "";
-        } else if (str.length() == 3 && str.equals("red") ) {
+        } else if (str.length() == 3 && str.equals("red")) {
             return "red";
         } else if (str.length() > 3 && str.startsWith("red")) {
             return "red";
@@ -109,6 +109,20 @@ public class String1 {
     such as with "edited".*/
     public boolean frontAgain(String str) {
         return str.length() > 1 && str.substring(0, 2).equals(str.substring(str.length() - 2));
+    }
+
+    //minCat
+    /*Given two strings, append them together (known as "concatenation") and return the result.
+    However, if the strings are different lengths, omit chars from the longer string so it is the same length
+    as the shorter string. So "Hello" and "Hi" yield "loHi". The strings may be any length.*/
+    public String minCat(String a, String b) {
+        if (a.length() > b.length()) {
+            return a.substring(a.length() - b.length()).concat(b);
+        } else if (a.length() < b.length()) {
+            return a.concat(b.substring(b.length() - a.length()));
+        } else {
+            return a + b;
+        }
     }
 
 }
