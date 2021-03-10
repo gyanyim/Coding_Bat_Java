@@ -46,4 +46,19 @@ public class String1 {
         }
     }
 
+    //lastChars
+    /*Given 2 strings, a and b, return a new string made of the first char of a and the last char of b,
+    so "yo" and "java" yields "ya". If either string is length 0, use '@' for its missing char.*/
+    public String lastChars(String a, String b) {
+        if (a.length() > 0 && b.length() > 0) {
+            return a.substring(0, 1).concat(b.substring(b.length() - 1));
+        } else if (a.isEmpty() && b.length() > 0) {
+            return "@".concat(b.substring(b.length() - 1));
+        } else if (a.length() > 0) {
+            return a.substring(0, 1).concat("@");
+        } else {
+            return "@@";
+        }
+    }
+
 }
