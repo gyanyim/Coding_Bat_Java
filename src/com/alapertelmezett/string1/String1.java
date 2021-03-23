@@ -1,4 +1,4 @@
-package com.alapertelmezett.String1;
+package com.alapertelmezett.string1;
 
 public class String1 {
 
