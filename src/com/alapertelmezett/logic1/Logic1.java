@@ -145,5 +145,11 @@ public class Logic1 {
         return a >= 13 && a <= 19 || b >= 13 && b <= 19 ? 19 : a + b;
     }
 
+    //answerCell
+    /*Your cell phone rings. Return true if you should answer it. Normally you answer, except in the morning you only
+    answer if it is your mom calling. In all cases, if you are asleep, you do not answer.*/
 
+    public boolean answerCell(boolean isMorning, boolean isMom, boolean isAsleep) {
+        return !isAsleep && (!isMorning || isMom);
+    }
 }
