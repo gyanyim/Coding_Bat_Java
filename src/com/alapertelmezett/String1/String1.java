@@ -167,4 +167,26 @@ public class String1 {
         return ((str.length() >= word.length() && str.substring(1, word.length()).equals(word.substring(1))))
                 ? str.substring(0, word.length()) : "";
     }
+
+    //withoutX
+    /*Given a string, if the first or last chars are 'x', return the string without those 'x' chars,
+    and otherwise return the string unchanged.*/
+
+    public String withoutX(String str) {
+        if (str.length() > 1) {
+            if (str.charAt(0) == 'x' && str.endsWith("x")) {
+                return str.substring(1, str.length() - 1);
+            }
+            if (str.charAt(0) == 'x') {
+                return str.substring(1);
+            }
+            if (str.endsWith("x")) {
+                return str.substring(0, str.length() - 1);
+            } else {
+                return str;
+            }
+        } else {
+            return "";
+        }
+    }
 }
