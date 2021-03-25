@@ -6,7 +6,7 @@ public class String2 {
     /*Given a string, return a string where for every char in the original, there are two chars.*/
 
     public String doubleChar(String str) {
-        String result="";
+        String result = "";
         int i = 0;
         while (i < str.length()) {
             char c = str.charAt(i);
@@ -15,4 +15,18 @@ public class String2 {
         }
         return result;
     }
+
+    //countHi
+    /*Return the number of times that the string "hi" appears anywhere in the given string.*/
+
+    public int countHi(String str) {
+        int counter = 0;
+        for (int i = 0; i < str.length() - 1; i++) {
+            if (str.charAt(i) == 'h' && str.charAt(i + 1) == 'i') {
+                counter++;
+            }
+        }
+        return counter;
+    }
+
 }
