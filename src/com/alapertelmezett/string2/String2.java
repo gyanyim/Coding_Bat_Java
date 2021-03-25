@@ -1,10 +1,11 @@
 package com.alapertelmezett.string2;
 
+import java.util.Locale;
+
 public class String2 {
 
     //doubleChar
     /*Given a string, return a string where for every char in the original, there are two chars.*/
-
     public String doubleChar(String str) {
         String result = "";
         int i = 0;
@@ -18,7 +19,6 @@ public class String2 {
 
     //countHi
     /*Return the number of times that the string "hi" appears anywhere in the given string.*/
-
     public int countHi(String str) {
         int counter = 0;
         for (int i = 0; i < str.length() - 1; i++) {
@@ -35,10 +35,10 @@ public class String2 {
         int catCounter = 0;
         int dogCounter = 0;
         for (int i = 0; i < str.length() - 2; i++) {
-            if (str.charAt(i) == 'c' && str.charAt(i + 1) == 'a' && str.charAt(i+2) == 't') {
+            if (str.charAt(i) == 'c' && str.charAt(i + 1) == 'a' && str.charAt(i + 2) == 't') {
                 catCounter++;
             }
-            if (str.charAt(i) == 'd' && str.charAt(i + 1) == 'o' && str.charAt(i+2) == 'g') {
+            if (str.charAt(i) == 'd' && str.charAt(i + 1) == 'o' && str.charAt(i + 2) == 'g') {
                 dogCounter++;
             }
         }
@@ -50,12 +50,27 @@ public class String2 {
     except we'll accept any letter for the 'd', so "cope" and "cooe" count.*/
     public int countCode(String str) {
         int counter = 0;
-        for (int i = 0; i < str.length()-3; i++) {
-            if (str.charAt(i) == 'c' && str.charAt(i + 1) == 'o' && str.charAt(i+2) != ' ' && str.charAt(i+3) == 'e') {
+        for (int i = 0; i < str.length() - 3; i++) {
+            if (str.charAt(i) == 'c' && str.charAt(i + 1) == 'o' && str.charAt(i + 2) != ' ' && str.charAt(i + 3) == 'e') {
                 counter++;
             }
         }
         return counter;
+    }
+
+    //endOther
+    /*Given two strings, return true if either of the strings appears at the very end of the other string, ignoring
+    upper/lower case differences (in other words, the computation should not be "case sensitive").
+    Note: str.toLowerCase() returns the lowercase version of a string.*/
+    public boolean endOther(String a, String b) {
+        if (a.length() > b.length()) {
+            return a.toLowerCase().substring(a.length() - b.length()).equals(b.toLowerCase());
+        } else if (b.length() > a.length()) {
+            return b.toLowerCase().substring(b.length() - a.length()).equals(a.toLowerCase(Locale.ROOT));
+        } else {
+            return a.toLowerCase().substring(a.length() - b.length()).equals(b.toLowerCase())
+                    || b.toLowerCase().substring(b.length() - a.length()).equals(a.toLowerCase());
+        }
     }
 
 
