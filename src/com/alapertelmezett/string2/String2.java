@@ -89,4 +89,16 @@ public class String2 {
         return false;
     }
 
+    //bobThere
+    /*Return true if the given string contains a "bob" string, but where the middle 'o' char can be any char.*/
+    public boolean bobThere(String str) {
+        boolean result = false;
+
+        for (int i = 0; i < str.length() - 2; i++) {
+            if (str.charAt(i) == 'b' && str.charAt(i + 2) == 'b') {
+                result = true;
+            }
+        }
+        return result;
+    }
 }
