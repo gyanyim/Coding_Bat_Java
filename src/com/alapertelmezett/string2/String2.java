@@ -202,5 +202,29 @@ public class String2 {
         return false;
     }
 
+    //getSandwich
+    /*A sandwich is two pieces of bread with something in between. Return the string that is between the first and last
+    appearance of "bread" in the given string, or return the empty string "" if there are not two pieces of bread.*/
+    public String getSandwich(String str) {
+        int bread1 = -1;
+        int bread2 = -1;
 
+        for (int i = 0; i < str.length() - 5; i++) {
+            if (str.substring(i, i + 5).equals("bread")) {
+                bread1 = i;
+                break;
+            }
+        }
+        for (int i = str.length()-5 ; i >= 0; i--) {
+            if (str.substring(i, i + 5).equals("bread")) {
+                bread2 = i;
+                break;
+            }
+        }
+
+        if (bread1 != 1 && bread2 != -1 && bread1 != bread2) {
+            return str.substring(bread1 + 5, bread2);
+        }
+        return "";
+    }
 }
