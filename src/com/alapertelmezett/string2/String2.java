@@ -297,4 +297,29 @@ public class String2 {
         }
         return result.toString();
     }
+
+    //plusOut
+    /*Given a string and a non-empty word string, return a version of the original String where all chars have been
+    replaced by pluses ("+"), except for appearances of the word string which are preserved unchanged.*/
+    public String plusOut(String str, String word) {
+        StringBuilder result = new StringBuilder();
+
+        for (int i = 0; i < str.length(); i++) {
+            if (i <= str.length() - word.length()) {
+                String temp = str.substring(i, i + word.length());
+                if (temp.equals(word)) {
+                    result.append(word);
+                    i += word.length() - 1;
+                } else {
+                    result.append("+");
+                }
+            } else {
+                result.append("+");
+            }
+
+        }
+        return result.toString();
+    }
+
+
 }
