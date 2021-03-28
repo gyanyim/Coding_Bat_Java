@@ -215,7 +215,7 @@ public class String2 {
                 break;
             }
         }
-        for (int i = str.length()-5 ; i >= 0; i--) {
+        for (int i = str.length() - 5; i >= 0; i--) {
             if (str.substring(i, i + 5).equals("bread")) {
                 bread2 = i;
                 break;
@@ -227,4 +227,18 @@ public class String2 {
         }
         return "";
     }
+
+    //
+    /*Returns true if for every '*' (star) in the string, if there are chars both immediately before and after
+    the star, they are the same.*/
+    public boolean sameStarChar(String str) {
+        for (int i = 1; i < str.length() - 1; i++) {
+            if (str.charAt(i) == '*' && str.charAt(i - 1) != str.charAt(i + 1)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+
 }
