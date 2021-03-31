@@ -97,10 +97,27 @@ public class Ap1 {
 
         for (int i = 0; i < words.length; i++) {
             if (len != words[i].length()) {
-                 resultList.add(words[i]);
+                resultList.add(words[i]);
             }
 
         }
         return resultList;
     }
+
+    //hasOne
+    /*Given a positive int n, return true if it contains a 1 digit. Note: use % to get the rightmost digit,
+    and / to discard the rightmost digit.*/
+    public boolean hasOne(int n) {
+        while (n != 0) {
+            if (n % 10 == 1) {
+                return true;
+            } else {
+                n /= 10;
+            }
+        }
+
+        return false;
+    }
+
+
 }
