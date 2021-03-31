@@ -1,5 +1,7 @@
 package com.alapertelmezett.ap1;
 
+import java.util.Arrays;
+
 public class Ap1 {
 
     //scoreIncreasing
@@ -72,5 +74,15 @@ public class Ap1 {
             }
         }
         return count;
+    }
+
+    //wordsFront
+    /*Given an array of strings, return a new array containing the first N strings. N will be in the range 1..length.*/
+    public String[] wordsFront(String[] words, int n) {
+        String[] arrString = new String[n];
+
+        Arrays.setAll(arrString, i -> words[i]);
+
+        return arrString;
     }
 }
