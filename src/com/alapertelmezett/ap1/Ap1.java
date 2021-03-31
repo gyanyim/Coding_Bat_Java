@@ -1,6 +1,8 @@
 package com.alapertelmezett.ap1;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class Ap1 {
 
@@ -84,5 +86,21 @@ public class Ap1 {
         Arrays.setAll(arrString, i -> words[i]);
 
         return arrString;
+    }
+
+    //wordsWithoutList
+    /*Given an array of strings, return a new List (e.g. an ArrayList) where all the strings of the given length are
+    omitted. See wordsWithout() below which is more difficult because it uses arrays.*/
+    public List wordsWithoutList(String[] words, int len) {
+
+        List resultList = new ArrayList();
+
+        for (int i = 0; i < words.length; i++) {
+            if (len != words[i].length()) {
+                 resultList.add(words[i]);
+            }
+
+        }
+        return resultList;
     }
 }
