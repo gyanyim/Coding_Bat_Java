@@ -271,7 +271,6 @@ public class Ap1 {
         int sum = 0;
         for (int i = start; i < end; i++) {
             sum += Math.abs(heights[i] - heights[i + 1]);
-
         }
         return sum;
     }
