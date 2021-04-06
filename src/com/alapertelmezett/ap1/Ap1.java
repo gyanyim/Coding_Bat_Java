@@ -334,11 +334,11 @@ public class Ap1 {
         int aInd = 0;
         int bInd = 0;
 
-        for(int i = 0; i < n; i++) {
-            if(a[aInd].compareTo(b[bInd]) < 0) {
+        for (int i = 0; i < n; i++) {
+            if (a[aInd].compareTo(b[bInd]) < 0) {
                 resultArray[i] = a[aInd];
                 aInd++;
-            } else if(a[aInd].compareTo(b[bInd]) > 0) {
+            } else if (a[aInd].compareTo(b[bInd]) > 0) {
                 resultArray[i] = b[bInd];
                 bInd++;
             } else {
@@ -348,5 +348,23 @@ public class Ap1 {
             }
         }
         return resultArray;
+    }
+
+    //commonTwo
+    /*Start with two arrays of strings, a and b, each in alphabetical order, possibly with duplicates. Return the
+    count of the number of strings which appear in both arrays. The best "linear" solution makes a single pass over
+    both arrays, taking advantage of the fact that they are in alphabetical order.*/
+    public int commonTwo(String[] a, String[] b) {
+        int count = 0;
+        StringBuilder tempStr = new StringBuilder();
+        for (String s : b) {
+            for (String value : a) {
+                if (value.equals(s) && !tempStr.toString().contains(value)) {
+                    tempStr.append(value);
+                    count++;
+                }
+            }
+        }
+        return count;
     }
 }
