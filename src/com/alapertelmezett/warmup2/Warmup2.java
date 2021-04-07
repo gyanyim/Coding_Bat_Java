@@ -42,11 +42,22 @@ public class Warmup2 {
     //doubleX
     /*Given a string, return true if the first instance of "x" in the string is immediately followed by another "x".*/
     boolean doubleX(String str) {
-        for (int i = 0; i < str.length()-1; i++) {
-            if(str.charAt(i) == 'x') {
+        for (int i = 0; i < str.length() - 1; i++) {
+            if (str.charAt(i) == 'x') {
                 return str.charAt(i + 1) == 'x';
             }
         }
         return false;
+    }
+
+    //stringBits
+    /*Given a string, return a new string made of every other char starting with the first, so "Hello" yields "Hlo".*/
+    public String stringBits(String str) {
+        StringBuilder result = new StringBuilder();
+
+        for (int i = 0; i < str.length(); i += 2) {
+            result.append(str.charAt(i));
+        }
+        return result.toString();
     }
 }
