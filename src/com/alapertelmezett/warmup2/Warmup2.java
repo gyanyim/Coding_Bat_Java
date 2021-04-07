@@ -1,5 +1,7 @@
 package com.alapertelmezett.warmup2;
 
+import java.sql.PreparedStatement;
+
 public class Warmup2 {
 
     //stringTimes
@@ -86,5 +88,15 @@ public class Warmup2 {
         return counter;
     }
 
-
+    //arrayCount9
+    /*Given an array of ints, return the number of 9's in the array.*/
+    public int arrayCount9(int[] nums) {
+        int counter = 0;
+        for (int num : nums) {
+            if (num == 9) {
+                counter++;
+            }
+        }
+        return counter;
+    }
 }
