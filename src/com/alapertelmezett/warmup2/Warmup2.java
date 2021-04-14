@@ -130,9 +130,9 @@ public class Warmup2 {
     in both strings.*/
     public int stringMatch(String a, String b) {
         int counter = 0;
-        int minimumLength = Math.min(a.length(),b.length());
+        int minimumLength = Math.min(a.length(), b.length());
 
-        for (int i = 0; i < minimumLength-1; i++) {
+        for (int i = 0; i < minimumLength - 1; i++) {
             if (a.substring(i, i + 2).equals(b.substring(i, i + 2))) {
                 counter++;
             }
@@ -146,9 +146,24 @@ public class Warmup2 {
     public String stringX(String str) {
         StringBuilder result = new StringBuilder();
         for (int i = 0; i < str.length(); i++) {
-           if (!(i > 0 && i < (str.length()-1) && str.charAt(i) == 'x')) {
-               result.append(str.charAt(i));
-           }
+            if (!(i > 0 && i < (str.length() - 1) && str.charAt(i) == 'x')) {
+                result.append(str.charAt(i));
+            }
+        }
+        return result.toString();
+    }
+
+    //altPairs
+    /*Given a string, return a string made of the chars at indexes 0,1, 4,5, 8,9 ... so "kittens" yields "kien".*/
+    public String altPairs(String str) {
+        StringBuilder result = new StringBuilder();
+
+        for (int i=0; i<str.length(); i += 4) {
+            int last = i + 2;
+            if (last > str.length()) {
+                last = str.length();
+            }
+            result.append(str, i, last);
         }
         return result.toString();
     }
