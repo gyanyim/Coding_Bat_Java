@@ -38,4 +38,17 @@ public class Array1 {
         }
         return sum;
     }
+
+    //rotateLeft
+    /*Given an array of ints length 3, return an array with the elements "rotated left"
+    so {1, 2, 3} yields {2, 3, 1}.*/
+    public int[] rotateLeft3(int[] nums) {
+        int last = nums[0];
+        for (int i = 1; i < nums.length; i++) {
+            nums[i - 1] = nums[i];
+        }
+        nums[nums.length - 1] = last;
+
+        return nums;
+    }
 }
