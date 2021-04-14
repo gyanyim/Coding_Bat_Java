@@ -48,7 +48,18 @@ public class Array1 {
             nums[i - 1] = nums[i];
         }
         nums[nums.length - 1] = last;
+        return nums;
+    }
 
+    //reverse3
+    /*Given an array of ints length 3, return a new array with the elements in reverse order,
+    so {1, 2, 3} becomes {3, 2, 1}.*/
+    public int[] reverse3(int[] nums) {
+        int last = nums[0];
+        for (int i = 1; i < nums.length-1; i++) {
+            nums[i - 1] = nums[i + 1];
+        }
+        nums[nums.length - 1] = last;
         return nums;
     }
 }
