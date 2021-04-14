@@ -13,7 +13,12 @@ public class Array1 {
     /*Given an array of ints, return true if the array is length 1 or more,
     and the first element and the last element are equal.*/
     public boolean sameFirstLast(int[] nums) {
-        return (nums.length > 0 && nums[0] == nums[nums.length-1]);
+        return (nums.length > 0 && nums[0] == nums[nums.length - 1]);
     }
 
+    //makePi
+    /*Return an int array length 3 containing the first 3 digits of pi, {3, 1, 4}.*/
+    public int[] makePi() {
+        return new int[]{3, 1, 4};
+    }
 }
