@@ -158,12 +158,28 @@ public class Warmup2 {
     public String altPairs(String str) {
         StringBuilder result = new StringBuilder();
 
-        for (int i=0; i<str.length(); i += 4) {
+        for (int i = 0; i < str.length(); i += 4) {
             int last = i + 2;
             if (last > str.length()) {
                 last = str.length();
             }
             result.append(str, i, last);
+        }
+        return result.toString();
+    }
+
+    //stringYak
+    /*Suppose the string "yak" is unlucky. Given a string, return a version where all the "yak" are removed,
+    but the "a" can be any char. The "yak" strings will not overlap.*/
+    public String stringYak(String str) {
+        StringBuilder result = new StringBuilder();
+
+        for (int i = 0; i < str.length(); i++) {
+            if (i + 2 < str.length() && str.charAt(i) == 'y' && str.charAt(i + 2) == 'k') {
+                i = i + 2;
+            } else {
+                result.append(str.charAt(i));
+            }
         }
         return result.toString();
     }
