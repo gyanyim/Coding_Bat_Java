@@ -123,7 +123,27 @@ public class Array1 {
     Note: by default, a new int array contains all 0's.*/
     public int[] makeLast(int[] nums) {
         int[] result = new int[nums.length * 2];
-        result[result.length-1] = nums[nums.length-1];
+        result[result.length - 1] = nums[nums.length - 1];
         return result;
+    }
+
+    //double23
+    /*Given an int array, return true if the array contains 2 twice, or 3 twice. The array will be length 0, 1, or 2.*/
+    public boolean double23(int[] nums) {
+        int counter2 = 0;
+        int counter3 = 0;
+
+        if (nums.length < 2) {
+            return false;
+        } else {
+            for (int num : nums) {
+                if (num == 2) {
+                    counter2++;
+                } else if (num == 3) {
+                    counter3++;
+                }
+            }
+        }
+        return counter2 == 2 || counter3 == 2;
     }
 }
