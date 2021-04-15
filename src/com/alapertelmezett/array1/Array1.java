@@ -56,10 +56,24 @@ public class Array1 {
     so {1, 2, 3} becomes {3, 2, 1}.*/
     public int[] reverse3(int[] nums) {
         int last = nums[0];
-        for (int i = 1; i < nums.length-1; i++) {
+        for (int i = 1; i < nums.length - 1; i++) {
             nums[i - 1] = nums[i + 1];
         }
         nums[nums.length - 1] = last;
+        return nums;
+    }
+
+    //maxEnd3
+    /*Given an array of ints length 3, figure out which is larger, the first or last element in the array,
+    and set all the other elements to be that value. Return the changed array.*/
+    public int[] maxEnd3(int[] nums) {
+        if (nums[0] > nums[2]) {
+            nums[1] = nums[0];
+            nums[2] = nums[0];
+        } else {
+            nums[0] = nums[2];
+            nums[1] = nums[2];
+        }
         return nums;
     }
 }
