@@ -242,4 +242,24 @@ public class Array1 {
         return (nums.length > 1 && nums[0] == 1 && nums[1] == 3 || nums.length > 1 && nums[1] == 1 && nums[2] == 3
                 || nums.length > 1 && nums[nums.length - 2] == 1 && nums[nums.length - 1] == 3);
     }
+
+    //make2
+    /*Given 2 int arrays, a and b, return a new array length 2 containing, as much as will fit, the elements
+    from a followed by the elements from b. The arrays may be any length, including 0,
+    but there will be 2 or more elements available between the 2 arrays.*/
+    public int[] make2(int[] a, int[] b) {
+        int[] result = new int[2];
+
+        if (a.length > 1) {
+            result[0] = a[0];
+            result[1] = a[1];
+        } else if (a.length == 1 ) {
+            result[0] = a[0];
+            result[1] = b[0];
+        } else {
+            result[0] = b[0];
+            result[1] = b[1];
+        }
+        return result;
+    }
 }
