@@ -227,4 +227,11 @@ public class Array1 {
     public int maxTriple(int[] nums) {
         return Math.max(Math.max(nums[0], nums[nums.length / 2]), nums[nums.length - 1]);
     }
+
+    //frontPiece
+    /*Given an int array of any length, return a new array of its first 2 elements.
+    If the array is smaller than length 2, use whatever elements are present.*/
+    public int[] frontPiece(int[] nums) {
+        return (nums.length > 1) ? new int[]{nums[0], nums[1]} : nums;
+    }
 }
