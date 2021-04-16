@@ -44,7 +44,7 @@ public class String1 {
     If the string is shorter than length 2, return whatever there is, so "X" yields "X", and the empty string ""
     yields the empty string "". Note that str.length() returns the length of a string.*/
     public String firstTwo(String str) {
-        return (str.length() > 1) ? str.substring(0,2) : str;
+        return (str.length() > 1) ? str.substring(0, 2) : str;
     }
 
     //twoChar
