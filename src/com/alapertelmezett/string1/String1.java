@@ -95,6 +95,13 @@ public class String1 {
         return front ? str.substring(0, 1) : str.substring(str.length() - 1);
     }
 
+    //withoutEnd2
+    /*Given a string, return a version without both the first and last char of the string.
+    The string may be any length, including 0.*/
+    public String withouEnd2(String str) {
+        return str.length() > 2 ? str.substring(1, str.length() - 1) : "";
+    }
+
     //twoChar
     /*Given a string and an index, return a string length 2 starting at the given index. If the index is too big or
      too small to define a string length 2, use the first 2 chars. The string length will be at least 2.*/
