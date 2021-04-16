@@ -88,6 +88,13 @@ public class String1 {
         return str.substring(str.length() - 2).concat(str.substring(0, str.length() - 2));
     }
 
+    //theEnd
+    /*Given a string, return a string length 1 from its front, unless front is false,
+    in which case return a string length 1 from its back. The string will be non-empty.*/
+    public String theEnd(String str, boolean front) {
+        return front ? str.substring(0, 1) : str.substring(str.length() - 1);
+    }
+
     //twoChar
     /*Given a string and an index, return a string length 2 starting at the given index. If the index is too big or
      too small to define a string length 2, use the first 2 chars. The string length will be at least 2.*/
