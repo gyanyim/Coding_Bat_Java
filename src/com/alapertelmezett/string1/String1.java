@@ -23,6 +23,14 @@ public class String1 {
         return "<" + tag + ">" + word + "</" + tag + ">";
     }
 
+    //makeOutWord
+    /*Given an "out" string length 4, such as "<<>>", and a word, return a new string where the word is
+    in the middle of the out string, e.g. "<<word>>". Note: use str.substring(i, j) to extract the String
+    starting at index i and going up to but not including index j.*/
+    public String makeOutWord(String out, String word) {
+        return out.substring(0, 2).concat(word).concat(out.substring(2));
+    }
+
     //twoChar
     /*Given a string and an index, return a string length 2 starting at the given index. If the index is too big or
      too small to define a string length 2, use the first 2 chars. The string length will be at least 2.*/
