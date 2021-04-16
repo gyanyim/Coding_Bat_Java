@@ -2,6 +2,12 @@ package com.alapertelmezett.string1;
 
 public class String1 {
 
+    //helloName
+    /*Given a string name, e.g. "Bob", return a greeting of the form "Hello Bob!".*/
+    public String helloName(String name) {
+        return "Hello " + name + "!";
+    }
+
     //twoChar
     /*Given a string and an index, return a string length 2 starting at the given index. If the index is too big or
      too small to define a string length 2, use the first 2 chars. The string length will be at least 2.*/
