@@ -74,6 +74,13 @@ public class String1 {
         return a.substring(1).concat(b.substring(1));
     }
 
+    //left2
+    /*Given a string, return a "rotated left 2" version where the first 2 chars are moved to the end.
+    The string length will be at least 2.*/
+    public String left2(String str) {
+        return str.substring(2).concat(str.substring(0, 2));
+    }
+
     //twoChar
     /*Given a string and an index, return a string length 2 starting at the given index. If the index is too big or
      too small to define a string length 2, use the first 2 chars. The string length will be at least 2.*/
