@@ -81,6 +81,13 @@ public class String1 {
         return str.substring(2).concat(str.substring(0, 2));
     }
 
+    //right2
+    /*Given a string, return a "rotated right 2" version where the last 2 chars are moved to the start.
+    The string length will be at least 2.*/
+    public String right2(String str) {
+        return str.substring(str.length() - 2).concat(str.substring(0, str.length() - 2));
+    }
+
     //twoChar
     /*Given a string and an index, return a string length 2 starting at the given index. If the index is too big or
      too small to define a string length 2, use the first 2 chars. The string length will be at least 2.*/
