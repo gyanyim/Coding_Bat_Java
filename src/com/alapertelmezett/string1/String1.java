@@ -8,6 +8,13 @@ public class String1 {
         return "Hello " + name + "!";
     }
 
+    //makeAbba
+    /*Given two strings, a and b, return the result of putting them together in the order abba,
+    e.g. "Hi" and "Bye" returns "HiByeByeHi".*/
+    public String makeAbba(String a, String b) {
+        return a.concat(b).concat(b).concat(a);
+    }
+
     //twoChar
     /*Given a string and an index, return a string length 2 starting at the given index. If the index is too big or
      too small to define a string length 2, use the first 2 chars. The string length will be at least 2.*/
