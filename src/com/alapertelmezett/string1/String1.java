@@ -31,6 +31,14 @@ public class String1 {
         return out.substring(0, 2).concat(word).concat(out.substring(2));
     }
 
+    //extraEnd
+    /*Given a string, return a new string made of 3 copies of the last 2 chars of the original string.
+    The string length will be at least 2.*/
+    public String extraEnd(String str) {
+        String lastTwoChar = str.substring(str.length() - 2);
+        return lastTwoChar.concat(lastTwoChar).concat(lastTwoChar);
+    }
+
     //twoChar
     /*Given a string and an index, return a string length 2 starting at the given index. If the index is too big or
      too small to define a string length 2, use the first 2 chars. The string length will be at least 2.*/
