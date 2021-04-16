@@ -67,6 +67,13 @@ public class String1 {
         return (a.length() > b.length()) ? b.concat(a).concat(b) : a.concat(b).concat(a);
     }
 
+    //nonStart
+    /*Given 2 strings, return their concatenation, except omit the first char of each.
+    The strings will be at least length 1.*/
+    public String nonStart(String a, String b) {
+        return a.substring(1).concat(b.substring(1));
+    }
+
     //twoChar
     /*Given a string and an index, return a string length 2 starting at the given index. If the index is too big or
      too small to define a string length 2, use the first 2 chars. The string length will be at least 2.*/
