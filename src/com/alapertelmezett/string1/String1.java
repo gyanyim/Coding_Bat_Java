@@ -60,6 +60,13 @@ public class String1 {
         return str.substring(1, str.length() - 1);
     }
 
+    //comboString
+    /*Given 2 strings, a and b, return a string of the form short+long+short, with the shorter string on the outside
+    and the longer string on the inside. The strings will not be the same length, but they may be empty (length 0).*/
+    public String comboString(String a, String b) {
+        return (a.length() > b.length()) ? b.concat(a).concat(b) : a.concat(b).concat(a);
+    }
+
     //twoChar
     /*Given a string and an index, return a string length 2 starting at the given index. If the index is too big or
      too small to define a string length 2, use the first 2 chars. The string length will be at least 2.*/
