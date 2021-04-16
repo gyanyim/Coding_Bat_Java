@@ -47,6 +47,12 @@ public class String1 {
         return (str.length() > 1) ? str.substring(0, 2) : str;
     }
 
+    //firstHalf
+    /*Given a string of even length, return the first half. So the string "WooHoo" yields "Woo".*/
+    public String firstHalf(String str) {
+        return str.substring(0, str.length() / 2);
+    }
+
     //twoChar
     /*Given a string and an index, return a string length 2 starting at the given index. If the index is too big or
      too small to define a string length 2, use the first 2 chars. The string length will be at least 2.*/
