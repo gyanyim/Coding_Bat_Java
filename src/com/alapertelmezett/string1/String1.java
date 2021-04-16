@@ -102,6 +102,13 @@ public class String1 {
         return str.length() > 2 ? str.substring(1, str.length() - 1) : "";
     }
 
+    //middleTwo
+    /*Given a string of even length, return a string made of the middle two chars, so the string "string" yields "ri".
+    The string length will be at least 2.*/
+    public String middleTwo(String str) {
+        return str.substring(str.length() / 2 - 1, str.length() / 2 + 1);
+    }
+
     //twoChar
     /*Given a string and an index, return a string length 2 starting at the given index. If the index is too big or
      too small to define a string length 2, use the first 2 chars. The string length will be at least 2.*/
