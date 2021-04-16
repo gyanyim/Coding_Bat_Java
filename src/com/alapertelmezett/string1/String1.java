@@ -109,6 +109,12 @@ public class String1 {
         return str.substring(str.length() / 2 - 1, str.length() / 2 + 1);
     }
 
+    //endsLy
+    /*Given a string, return true if it ends in "ly".*/
+    public boolean endsLy(String str) {
+        return str.length() > 1 && str.substring(str.length() - 2).equals("ly");
+    }
+
     //twoChar
     /*Given a string and an index, return a string length 2 starting at the given index. If the index is too big or
      too small to define a string length 2, use the first 2 chars. The string length will be at least 2.*/
