@@ -138,4 +138,12 @@ public class Warmup1 {
     public boolean loneTeen(int a, int b) {
         return a >= 13 && a <= 19 && !(b >= 13 && b <= 19) || b >= 13 && b <= 19 && !(a >= 13 && a <= 19);
     }
+
+    //delDel
+    /*Given a string, if the string "del" appears starting at index 1, return a string where that "del"
+    has been deleted. Otherwise, return the string unchanged.*/
+    public String delDel(String str) {
+        return str.length() > 3 && str.startsWith("del", 1)
+                ? str.substring(0, 1).concat(str.substring(4)) : str;
+    }
 }
