@@ -1,5 +1,7 @@
 package com.alapertelmezett.warmup1;
 
+import java.util.Locale;
+
 public class Warmup1 {
     //sleepIn
     /*The parameter weekday is true if it is a weekday, and the parameter vacation is true if we are on vacation.
@@ -231,5 +233,15 @@ public class Warmup1 {
     Note that the % "mod" operator computes remainders, so 17 % 10 is 7.*/
     public boolean lastDigit(int a, int b) {
         return a % 10 == b % 10;
+    }
+
+    //endUp
+    /*Given a string, return a new string where the last 3 chars are now in upper case. If the string has
+    less than 3 chars, uppercase whatever is there. Note that str.toUpperCase() returns the uppercase version of
+    a string.*/
+    public String endUp(String str) {
+        return str.length() > 2
+                ? str.substring(0, str.length() - 3).concat(str.substring(str.length() - 3).toUpperCase())
+                : str.toUpperCase();
     }
 }
