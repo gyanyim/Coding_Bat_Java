@@ -9,4 +9,21 @@ public class Logic2 {
     public boolean makeBricks(int small, int big, int goal) {
         return goal <= (big * 5 + small) && goal % 5 <= small;
     }
+
+    //loneSum
+    /*Given 3 int values, a b c, return their sum. However, if one of the values is the same as another of the values,
+    it does not count towards the sum.*/
+    public int loneSum(int a, int b, int c) {
+        if (a != b && a != c && b != c) {
+            return a + b + c;
+        } else if (a == b && a != c) {
+            return c;
+        } else if (a != b && a == c) {
+            return b;
+        } else if (a != c && b == c) {
+            return a;
+        } else {
+            return 0;
+        }
+    }
 }
