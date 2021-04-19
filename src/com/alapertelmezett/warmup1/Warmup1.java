@@ -146,4 +146,10 @@ public class Warmup1 {
         return str.length() > 3 && str.startsWith("del", 1)
                 ? str.substring(0, 1).concat(str.substring(4)) : str;
     }
+
+    //mixStart
+    /*Return true if the given string begins with "mix", except the 'm' can be anything, so "pix", "9ix" .. all count.*/
+    public boolean mixStart(String str) {
+        return str.length() > 2 && str.startsWith("ix", 1);
+    }
 }
