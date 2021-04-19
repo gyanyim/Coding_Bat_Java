@@ -61,4 +61,12 @@ public class Warmup1 {
     public String notString(String str) {
         return str.length() > 2 && str.substring(0, 3).equals("not") ? str : "not ".concat(str);
     }
+
+    //missingChar
+    /*Given a non-empty string and an int n, return a new string where the char at index n has been removed.
+    The value of n will be a valid index of a char in the original string
+    (i.e. n will be in the range 0..str.length()-1 inclusive).*/
+    public String missingChar(String str, int n) {
+        return str.substring(0, n).concat(str.substring(n + 1));
+    }
 }
