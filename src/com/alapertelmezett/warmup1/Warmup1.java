@@ -25,7 +25,7 @@ public class Warmup1 {
     /*Given an int n, return the absolute difference between n and 21,
     except return double the absolute difference if n is over 21.*/
     public int diff21(int n) {
-        return n > 21 ? (Math.abs(n-21)) *  2 : Math.abs(n-21);
+        return n > 21 ? (Math.abs(n - 21)) * 2 : Math.abs(n - 21);
     }
 
     //parrotTrouble
@@ -38,7 +38,7 @@ public class Warmup1 {
     //makes10
     /*Given 2 ints, a and b, return true if one if them is 10 or if their sum is 10.*/
     public boolean makes10(int a, int b) {
-        return a == 10 || b == 10 || a+b == 10;
+        return a == 10 || b == 10 || a + b == 10;
     }
 
     //nearHundred
@@ -46,5 +46,12 @@ public class Warmup1 {
     Note: Math.abs(num) computes the absolute value of a number.*/
     public boolean nearHundred(int n) {
         return n > 89 && n < 111 || n > 189 && n < 211;
+    }
+
+    //posNeg
+    /*Given 2 int values, return true if one is negative and one is positive.
+    Except if the parameter "negative" is true, then return true only if both are negative.*/
+    public boolean posNeg(int a, int b, boolean negative) {
+        return negative && a < 0 && b < 0 || !negative && a < 0 && b > 0 || !negative && a > 0 && b < 0;
     }
 }
