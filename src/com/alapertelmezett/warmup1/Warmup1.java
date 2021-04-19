@@ -69,4 +69,11 @@ public class Warmup1 {
     public String missingChar(String str, int n) {
         return str.substring(0, n).concat(str.substring(n + 1));
     }
+
+    //frontBack
+    /*Given a string, return a new string where the first and last chars have been exchanged.*/
+    public String frontBack(String str) {
+        return str.length() > 1 ? str.substring(str.length() - 1)
+                .concat(str.substring(1, str.length() - 1)).concat(str.substring(0, 1)) : str;
+    }
 }
