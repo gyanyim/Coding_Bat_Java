@@ -20,7 +20,7 @@ public class Logic2 {
             return c;
         } else if (a != b && a == c) {
             return b;
-        } else if (a != c && b == c) {
+        } else if (a != c) {
             return a;
         } else {
             return 0;
