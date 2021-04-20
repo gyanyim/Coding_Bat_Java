@@ -78,4 +78,19 @@ public class Logic2 {
         return (Math.abs(a - b) <= 1 && Math.abs(a - c) >= 2 && Math.abs(b - c) >= 2)
                 || Math.abs(a - c) <= 1 && Math.abs(a - b) >= 2 && Math.abs(c - b) >= 2;
     }
+
+    //blackjack
+    /*Given 2 int values greater than 0, return whichever value is nearest to 21 without going over.
+    Return 0 if they both go over.*/
+    public int blackjack(int a, int b) {
+        if (a < 22 && b < 22) {
+            return Math.max(a, b);
+        } else if (a < 22) {
+            return a;
+        } else if (b < 22) {
+            return b;
+        } else {
+            return 0;
+        }
+    }
 }
