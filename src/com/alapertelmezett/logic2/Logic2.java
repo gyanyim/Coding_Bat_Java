@@ -93,4 +93,20 @@ public class Logic2 {
             return 0;
         }
     }
+
+    //evenlySpaced
+    /*Given three ints, a b c, one of them is small, one is medium and one is large. Return true if the three values
+    are evenly spaced, so the difference between small and medium is the same as the difference
+    between medium and large.*/
+    public boolean evenlySpaced(int a, int b, int c) {
+        if (a > b && b > c || c > b && b > a) {
+            return Math.abs(a - b) == Math.abs(b - c);
+        } else if (a > c && c > b || b > c && c > a) {
+            return Math.abs(a - c) == Math.abs(c - b);
+        } else if (b > a && a > c || c > a && a > b) {
+            return Math.abs(b - a) == Math.abs(a - c);
+        } else {
+            return a == b && b == c;
+        }
+    }
 }
