@@ -131,4 +131,20 @@ public class String3 {
         }
         return sum;
     }
+
+    //sameEnds
+    /*Given a string, return the longest substring that appears at both the beginning and end of the string
+    without overlapping. For example, sameEnds("abXab") is "ab".*/
+    public String sameEnds(String string) {
+        String result = "";
+        String temp = "";
+
+        for (int i = 0; i < string.length(); i++) {
+            temp += string.charAt(i);
+            if (i < string.length() / 2 && temp.equals(string.substring(string.length() - temp.length()))) {
+                result = temp;
+            }
+        }
+        return result;
+    }
 }
