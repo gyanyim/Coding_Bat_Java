@@ -27,4 +27,28 @@ public class String3 {
         }
         return count;
     }
+
+    //withoutString
+    /*Given two strings, base and remove, return a version of the base string where all instances of the remove string
+    have been removed (not case sensitive). You may assume that the remove string is length 1 or more.
+    Remove only non-overlapping instances, so with "xxx" removing "xx" leaves "x".*/
+    public String withoutString(String base, String remove) {
+        StringBuilder fin = new StringBuilder();
+
+        for (int i = 0; i < base.length(); i++) {
+            if (i <= base.length() - remove.length()) {
+                String temp = base.toLowerCase().substring(i, i + remove.length());
+                if (!temp.equals(remove.toLowerCase()))
+                    fin.append(base.charAt(i));
+                else {
+                    i += remove.length() - 1;
+                }
+            } else {
+                String tmp2 = base.toLowerCase().substring(i, i + 1);
+                if (!tmp2.equals(remove.toLowerCase()))
+                    fin.append(base.charAt(i));
+            }
+        }
+        return fin.toString();
+    }
 }
