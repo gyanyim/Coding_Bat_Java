@@ -51,4 +51,31 @@ public class String3 {
         }
         return fin.toString();
     }
+
+    //equalIsNot
+    /*Given a string, return true if the number of appearances of "is" anywhere in the string is equal to
+    the number of appearances of "not" anywhere in the string (case sensitive).*/
+    public boolean equalIsNot(String str) {
+        int isCounter = 0;
+        int notCounter = 0;
+
+        if (str.length() == 0) {
+            return true;
+        } else if (str.length() < 3) {
+            return false;
+        }
+
+        for (int i = 0; i < str.length() - 1; i++) {
+            if (str.startsWith("is", i)) {
+                isCounter++;
+            }
+        }
+
+        for (int j = 0; j < str.length() - 2; j++) {
+            if (str.startsWith("not", j)) {
+                notCounter++;
+            }
+        }
+        return isCounter == notCounter;
+    }
 }
