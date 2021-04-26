@@ -164,4 +164,28 @@ public class String3 {
 
         return result.toString();
     }
+
+    //maxBlock
+    /*Given a string, return the length of the largest "block" in the string.
+    A block is a run of adjacent chars that are the same.*/
+    public int maxBlock(String str) {
+        if (str.length() == 0) {
+            return 0;
+        }
+
+        int largest = 0;
+        int temp = 1;
+
+        for (int i = 1; i < str.length(); i++) {
+            if (str.charAt(i) != str.charAt(i - 1)) {
+                if (temp > largest) {
+                    largest = temp;
+                }
+                temp = 1;
+            } else {
+                temp++;
+            }
+        }
+        return Math.max(largest, temp);
+    }
 }
